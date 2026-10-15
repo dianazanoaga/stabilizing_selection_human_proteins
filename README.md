@@ -104,3 +104,5 @@ R (≥ 4.2) with:
 ## Contact
 
 Mihaela-Diana Zanoaga, Department of Computational Biology, University of Lausanne.
+email: mihaeladiana.zanoaga@unil.ch
+
