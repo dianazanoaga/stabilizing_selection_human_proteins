@@ -1,10 +1,10 @@
 # Triangulating evidence to detect signatures of stabilizing selection acting on protein levels in humans
 
-Code accompanying the manuscript by **Mihaela-Diana Zanoaga, Théo Cavinato, Thibault Latrille, Tabea Schoeler, Orsolya Liska, Balázs Papp and Zoltán Kutalik** (University of Lausanne, SIB, Unisanté, Biological Research Centre Szeged).
+Code - manuscript by **Mihaela-Diana Zanoaga, Théo Cavinato, Thibault Latrille, Tabea Schoeler, Orsolya Liska, Balázs Papp and Zoltán Kutalik** (University of Lausanne, SIB, Unisanté, Biological Research Centre Szeged).
 
 ## Overview
 
-We investigate stabilizing selection on the circulating levels of 2,923 plasma proteins (UK Biobank Pharma Proteomics Project, Olink) in up to 337,386 UK Biobank participants by combining two complementary signatures of selection:
+We investigate stabilizing selection on the circulating levels of 2'923 plasma proteins (UK Biobank Pharma Proteomics Project, Olink) in up to 337'386 UK Biobank participants by combining two complementary signatures of selection:
 
 1. **Frequency-dependent genetic architecture**: variants with larger effects on protein levels are expected to be rarer under stabilizing selection.
    - **LDpred2-auto** on common variants (trans-pQTL summary statistics, cis region ±1 Mb excluded) → selection parameter α
@@ -18,7 +18,7 @@ The resulting estimates are then compared with each other and with independent m
 ```
 Preprocess/           sample QC, covariates, protein levels and fitness proxies
 Regression/           quadratic regressions of fitness proxies on protein levels
-LDpred2/              LDpred2-auto on common variants (trans only; cis + trans as sensitivity)
+LDpred2/              LDpred2-auto on common variants
 Burden/               likelihood model on rare loss-of-function burden estimates
 Constraint_metrics/   independent constraint measures 
 Triangulation/        integration of all selection estimates: patterns, concordance and overlap
@@ -33,10 +33,10 @@ Scripts are numbered in the order in which they are run. Steps in `Preprocess/`,
 | `01_sample_qc.R` | Unrelated, White British participants; redacted and withdrawn samples removed |
 | `02_covariates_complex_traits.R` | Covariates (age, age², sex, genotyping batch, PC1–40) and 48 complex traits |
 | `03_protein_levels.R` | Olink protein levels at baseline for the QC-passed sample (n = 36,185) |
-| `04_health_score_step1.R`, `05_health_score_step2.R` | Composite health score: covariate-adjusted traits, pruned at \|ρ\| > 0.4 (25 traits), standardized, squared and averaged |
-| `06_parental_longevity.R` | Parental longevity: inverse-normal transformed parental age at death, averaged over parents |
-| `07_educational_attainment.R` | Educational attainment (ISCED-years mapping of field 6138) |
-| `08_number_of_children.R` | Number of children (fields 2405 and 2734) |
+| `04_health_score_step1.R`, `05_health_score_step2.R` | Composite health score |
+| `06_parental_longevity.R` | Parental longevity |
+| `07_educational_attainment.R` | Educational attainment |
+| `08_number_of_children.R` | Number of children|
 | `09_tea_intake_negative_control.R` | Tea intake, used as a negative-control phenotype |
 
 ### `Regression/`
@@ -61,14 +61,14 @@ Scripts are numbered in the order in which they are run. Steps in `Preprocess/`,
 | Script | Description |
 |---|---|
 | `01_prepare_burden_per_protein.R` | Per-protein gene-burden estimates (high-confidence LoF, MAF < 10⁻³) |
-| `02_burden_likelihood_alpha.R` | Maximum-likelihood estimation of α_b and σ²_G |
+| `02_burden_likelihood_alpha.R` | Maximum-likelihood estimation of α_b |
 
 ### `Constraint_metrics/`
 
 | Script | Description |
 |---|---|
 | `lasso_r2_complex_traits.R` | Cross-validated R² of a LASSO regression of each protein on the complex traits |
-| `dnds_human_mouse.R` | Human–mouse dN/dS (`orthologr`, reciprocal best hits) |
+| `dnds_human_mouse.R` | Human–mouse dN/dS  |
 | `transcript_evolutionary_rate.R` | Meta-analysis of tissue-specific transcript evolutionary rates (Liu et al. 2023) |
 
 pLI and LOEUF (gnomAD v4.1), ω_A (Latrille et al. 2023), Gene Damage Index (Itan et al. 2015) and Moran's I were dowloaded or obtained from collaborators.
@@ -100,12 +100,6 @@ R (≥ 4.2) with:
 - **Analysis:** `bigsnpr`, `glmnet`, `orthologr`, `biomartr`, `Biostrings`
 - **Data handling:** `data.table`, `dplyr`, `tidyr`, `tibble`, `readr`, `readxl`, `writexl`, `arrow`
 - **Plotting:** `ggplot2`, `patchwork`, `gridExtra`, `ggrepel`, `UpSetR`
-
-## Citation
-
-If you use this code, please cite:
-
-> Zanoaga M-D, Cavinato T, Latrille T, Schoeler T, Liska O, Papp B, Kutalik Z. *Triangulating evidence to detect signatures of stabilizing selection acting on protein levels in humans.* (in preparation)
 
 ## Contact
 
