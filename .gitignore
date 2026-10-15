@@ -1,0 +1,21 @@
+# data and results (UK Biobank-derived, not shared)
+data/
+*.xlsx
+*.xls
+*.tsv
+*.csv
+*.txt
+*.rds
+*.RData
+*.gz
+
+# figures
+*.pdf
+*.png
+*.svg
+
+# R / OS files
+.Rhistory
+.Rproj.user/
+Rplots.pdf
+.DS_Store
