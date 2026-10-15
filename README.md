@@ -1,6 +1,6 @@
 # Triangulating evidence to detect signatures of stabilizing selection acting on protein levels in humans
 
-Code - manuscript by **Mihaela-Diana Zanoaga, Théo Cavinato, Thibault Latrille, Tabea Schoeler, Orsolya Liska, Balázs Papp and Zoltán Kutalik** (University of Lausanne, SIB, Unisanté, Biological Research Centre Szeged).
+Code - manuscript by **Mihaela-Diana Zanoaga, Théo Cavinato, Thibault Latrille, Orsolya Liska,  Tabea Schoeler, Balázs Papp and Zoltán Kutalik** (University of Lausanne, SIB, Unisanté, Biological Research Centre Szeged).
 
 ## Overview
 
