@@ -45,7 +45,7 @@ Scripts are numbered in the order in which they are run. Steps in `Preprocess/`,
 |---|---|
 | `01_quadratic_regression_fitness_proxies.R` | Covariate-adjusted fitness proxy ~ protein + protein² for every protein and proxy |
 | `02_quadratic_regression_tea_intake.R` | Same model with tea intake as outcome (negative control) |
-| `03_process_regression_results.R` | FDR, inferred optimum (−b / 2c) and flags for optimum within ±0.5 / ±1 SD |
+| `03_process_regression_results.R` | FDR, inferred optimum (−b / 2c) and flags for optimum within ±1 SD |
 
 ### `LDpred2/`
 
