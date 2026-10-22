@@ -4,7 +4,7 @@ Code - manuscript by **Mihaela-Diana Zanoaga, Théo Cavinato, Thibault Latrille,
 
 ## Overview
 
-We investigate stabilizing selection on the circulating levels of 2'923 plasma proteins (UK Biobank Pharma Proteomics Project, Olink) in up to 337'386 UK Biobank participants by combining two complementary signatures of selection:
+We investigate stabilizing selection on the circulating levels of 2'923 plasma proteins (UK Biobank Pharma Proteomics Project, Olink) in up to 50'000 UK Biobank participants by combining two complementary signatures of selection:
 
 1. **Frequency-dependent genetic architecture**: variants with larger effects on protein levels are expected to be rarer under stabilizing selection.
    - **LDpred2-auto** on common variants (trans-pQTL summary statistics, cis region ±1 Mb excluded) → selection parameter α
